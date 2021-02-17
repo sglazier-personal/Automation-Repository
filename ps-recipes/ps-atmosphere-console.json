@@ -1,0 +1,13 @@
+{
+	"name":"atmosphere-console",
+	"phases":["finalize"],
+	"description":"Atmosphere Console Config",
+	"configurations":[
+		{
+			"pid":"com.soa.atmosphere.console",
+			"update":{
+				"atmosphere.context.root":"${ATMOSPHERECONTEXT|/atmosphere}"
+			}
+		}
+	]
+}

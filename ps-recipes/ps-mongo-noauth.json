@@ -1,0 +1,25 @@
+{
+	"name":"mongo",
+	"description":"Mongo Configuration",
+	"phases":["deploy"],
+	"includes":[
+		{ "location":"mongo-schema-task.json" }
+	],
+	"features":{
+		"install":[
+			"com.soa.persistence.plugin"			
+		]
+	},	
+	"tasks":[
+		{
+			"name":"mongodb.database.config.task",
+			"steps":[{
+				"name":"mongodb.database.config.task",
+				"properties":{
+					"mongoClientURI":"${MONGO_URL|mongodb://localhost:27017/Akana?connectTimeoutMS=15000&socketTimeoutMS=1500000&minPoolSize=0&maxPoolSize=100&waitQueueMultiple=5&waitQueueTimeoutMS=10000}",
+					"enabled":true	
+				}
+			}]
+		}
+	]
+}

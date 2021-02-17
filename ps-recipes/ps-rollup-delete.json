@@ -1,0 +1,21 @@
+{
+	"name":"rollup-delete",
+	"phases":["finalize"],
+	"description":"com.soa.rollup.delete.old Config",
+	"configurations":[
+		{
+			"pid":"com.soa.rollup.delete.old",
+			"update":{
+				"monitoring.delete.rollup.MO_ROLLUP15.enable":"${DELETE_MO_ROLLUP15|true}",
+				"monitoring.delete.rollup.MO_ROLLUPDATA.enable":"${DELETE_MO_ROLLUPDATA|true}",
+				"monitoring.delete.rollup.MO_ROLLUP_DAY.enable":"${DELETE_MO_ROLLUP_DAY|true}",
+				"monitoring.delete.rollup.MO_ROLLUP_HOUR.enable":"${DELETE_MO_ROLLUP_HOUR|true}",
+				"monitoring.delete.rollup.MO_ROLL_ORG15.enable":"${DELETE_MO_ROLL_ORG15|true}",
+				"monitoring.delete.rollup.MO_ROLL_ORG_D.enable":"${DELETE_MO_ROLL_ORG_D|true}",
+				"monitoring.delete.rollup.MO_ROLL_ORG_H.enable":"${DELETE_MO_ROLL_ORG_H|true}",
+				"monitoring.delete.usage.enable":"${DELETE_USAGE|true}",
+				"monitoring.delete.usage.includeMessages":"${DELETE_USAGE_INCLUDEMESSAGES|true}"
+			}
+		}
+	]
+}

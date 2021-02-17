@@ -1,0 +1,11 @@
+{
+        "name":"pm-console",
+        "description":"PM console recipe",
+        "phases":["deploy"],
+        "features":{
+                "timeout":"360000",
+                "install":[
+                        "com.soa.feature.console"
+                ]
+        }
+}

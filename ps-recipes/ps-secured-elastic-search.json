@@ -1,0 +1,31 @@
+{
+	"name":"SecuredElasticSearch",
+	"description":"Secured Elastic Search Recipe",
+	"phases":["finalize"],
+	"configurations":[
+		{
+			"pid":"com.akana.es.client.security",
+			"update":{
+				"elastic.client.alias":"${SECURE_ES_ALIAS|}",
+				"elastic.client.aliasPassword":"${SECURE_ES_ALIAS_PASSWORD|}",
+				"elastic.client.clientUser":"${SECURE_ES_CLIENT_USER|}",
+				"elastic.client.clientUserPassword":"${SECURE_ES_CLIENT_USER_PASSWORD|}",
+				"elastic.client.enableSSL":"${SECURE_ES_ENABLE_SSL|false}",
+				"elastic.client.keystorePassword":"${SECURE_ES_KEYSTORE_PASSWORD|}",
+				"elastic.client.keystorePath":"${SECURE_ES_KEYSTORE_PATH|}",
+				"elastic.client.certificateAuthorities":"${SECURE_ES_CERTIFICATE_AUTHORITIES|}",
+				"elastic.client.keyPassphrase":"${SECURE_ES_KEY_PASSPHRASE|}",
+				"elastic.client.keyPassword":"${SECURE_ES_KEY_PASSWORD|}",
+				"elastic.client.keystoreType":"${SECURE_ES_KEYSTORE_TYPE|PKCS12}",
+				"elastic.client.sslCertificate":"${SECURE_ES_SSL_CERTIFICATE|}",
+				"elastic.client.sslHostNameVerifierMode":"${SECURE_ES_SSL_HOSTNAME_VERIFIER_MODE|allow_all}",
+				"elastic.client.sslKey":"${SECURE_ES_SSL_KEY|}",
+				"elastic.client.transportSSLVerificationMode":"${SECURE_ES_TRANSPORT_SSL_VERIFICATION_MODE|none}",
+				"elastic.client.truststorePassword":"${SECURE_ES_TRUSTSTORE_PASSWORD|}",
+				"elastic.client.truststorePath":"${SECURE_ES_TRUSTSTORE_PATH|}",
+				"elastic.rest.client.connectionTimeout":"${SECURE_ES_CLIENT_CONNECTION_TIMEOUT|1000}",
+				"elastic.rest.client.socketTimeout":"${SECURE_ES_CLIENT_SOCKET_TIMEOUT|30000}"
+			}
+		}
+	]
+}

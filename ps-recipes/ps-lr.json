@@ -1,0 +1,20 @@
+{
+        "name":"lr",
+        "description":"Lifecycle Repository recipe",
+        "phases":["deploy"],
+        "features":{
+                "timeout":"360000",
+                "install":[
+                        "com.soa.repository.feature.lifecyclerepository",
+                        "com.soa.repository.feature.lifecyclemanager"
+                ]
+        },
+        "configurations":[
+			{
+				"pid":"com.soa.promotion",
+				"add": {
+					"remote.promotor.address":"${PROMOTOR_ADDRESS_KEY}"
+				}
+			}
+	]
+}

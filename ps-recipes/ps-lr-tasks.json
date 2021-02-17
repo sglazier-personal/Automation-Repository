@@ -1,0 +1,32 @@
+{
+        "name":"lr-tasks",
+        "description":"LR container tasks recipe",
+        "phases":["deploy"],
+        "tasks":[
+                {
+                        "name":"com.soa.repository.database",
+                        "steps":[
+                                {
+                                        "name":"com.soa.repository.database",
+                                        "timeout":"480000",
+                                        "properties":{
+                                                
+                                        }
+                                }
+                        ]
+                },
+                {
+                        "name":"com.soa.repository.superuser.password",
+                        "steps":[
+                                {
+                                        "name":"com.soa.repository.superuser.password",
+                                        "properties":{
+                                                "Enabled":"${LR_ADMIN_ENABLED|true}",
+                                                "superUserPassword":"${LR_PASSWORD|password}",
+                                                "superUserPasswordConfirm":"${LR_PASSWORD|password}"
+                                        }
+                                }
+                        ]
+                }
+        ]
+}

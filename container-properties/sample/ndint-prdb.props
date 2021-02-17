@@ -1,0 +1,54 @@
+INSTALL_DIR=/data/u01/apps/Akana/2020
+PRODUCT_HOME=/data/u01/apps/Akana/2020
+CONTAINER_NAME=ndint_b_stl
+CONTAINER_KEY=10004
+CONTAINER_ADMIN=administrator
+CONTAINER_ADMIN_PASSWORD=password
+DEFAULT_HOST=uxieprdapp10
+DEFAULT_PORT=9911
+DEFAULT_BIND_ALL=true
+ROOT_CONTEXT=
+SESSION_TIMEOUT=3600
+
+# db-driver.json
+DB_DRIVER_LOCATION=file:///data/u01/apps/Akana/resources/ojdbc8.jar
+
+# container-identity.json
+CONTAINER_IDENTITY_ACTION=generate.pki.keys.and.x509
+
+# security.json
+#KEYSTOREALIAS=
+#KEYSTORELOCATION=
+#KEYSTOREPASSWORD=
+TRUSTSTORELOCATION=file:///data/u01/apps/Akana/PKI/akana_b_stl.jks
+TRUSTSTOREPASSWORD=password
+CRLENABLED=false
+
+# admin-console.json
+ADMIN_CONSOLE_LOCALHOST_ONLY=false
+ADMIN_CONSOLE_ACCESS_RESTRICTED=true
+ADMIN_CONSOLE_DOMAIN_ENABLED=true
+ADMIN_CONSOLE_BASICAUTH_ENABLED=true
+
+# MongoDB
+MONGO_USERNAME=
+MONGO_PASSWORD=
+# MONGO_URL=mongodb://mongohost.acme.com:27017/Akana?connectTimeoutMS=15000&socketTimeoutMS=1500000&minPoolSize=0&maxPoolSize=100&waitQueueMultiple=5&waitQueueTimeoutMS=10000
+MONGOASYNCTHREAD=20
+
+# Policy Manager Connection
+PM_SCHEME=https
+PM_HOST=uxieprdapp09
+PM_PORT=9900
+PM_ADMIN=administrator
+PM_PASSWORD=password
+
+# remote-writer-nd.json
+LOCALWRITERENABLED=false
+REMOTEWRITERENABLED=true
+RETRYONUNRECOVERABLEERROR=true
+
+# platform-jetty.json
+JETTY_SERVLET_ENABLE=false
+NCSA_ACCESS_LOG_ENABLE=false
+NCSA_ACCESS_LOG_RETAIN=10

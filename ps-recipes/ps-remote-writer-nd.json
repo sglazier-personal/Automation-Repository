@@ -1,0 +1,15 @@
+{
+	"name":"remote-writer-nd",
+	"phases":["finalize"],
+	"description":"Performance ND container template",
+	"configurations":[
+		{
+			"pid":"com.soa.monitor.usage",
+			"update":{
+				"usage.local.writer.enabled":"${LOCALWRITERENABLED|true}",
+				"usage.remote.writer.enabled":"${REMOTEWRITERENABLED|false}",
+				"usage.remote.writer.retryOnUnrecoverableError":"${RETRYONUNRECOVERABLEERROR|false}"
+			}
+		}
+	]
+}

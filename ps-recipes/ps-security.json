@@ -1,0 +1,24 @@
+{
+    "name":"security",
+    "description":"Security recipe",
+    "phases":["deploy"],
+    "includes":[
+    ],
+    "configurations":[
+        {
+            "pid":"com.soa.security",
+            "update":{
+                "bootstrap.keystore.alias":"${KEYSTOREALIAS|KeyStoreBasedX509KeyManagerAlias}",
+                "bootstrap.keystore.location":"${KEYSTORELOCATION|META-INF/keystore/keystore-default.jks}",
+                "bootstrap.keystore.password":"${KEYSTOREPASSWORD|changeit}",
+                "bootstrap.truststore.location":"${TRUSTSTORELOCATION|META-INF/keystore/keystore-default.jks}",
+                "bootstrap.truststore.password":"${TRUSTSTOREPASSWORD|changeit}"
+            }
+        },{
+            "pid":"com.soa.crl",
+            "update":{
+                "com.soa.crl.enabled":"${CRLENABLED|true}"
+            }
+        }
+    ]
+}

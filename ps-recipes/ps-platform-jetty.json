@@ -1,0 +1,15 @@
+{
+	"name":"platform-jetty",
+	"phases":["finalize"],
+	"description":"com.soa.platform.jetty Config",
+	"configurations":[
+		{
+			"pid":"com.soa.platform.jetty",
+			"update":{
+				"jetty.information.servlet.enable":"${JETTY_SERVLET_ENABLE|false}",
+				"ncsa.access.log.enable":"${NCSA_ACCESS_LOG_ENABLE|false}",
+				"ncsa.access.log.retainDays":"${NCSA_ACCESS_LOG_RETAIN|30}"
+			}
+		}
+	]
+}

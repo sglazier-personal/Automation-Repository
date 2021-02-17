@@ -1,0 +1,45 @@
+INSTALL_DIR=/data/u01/apps/Akana/2020
+PRODUCT_HOME=/data/u01/apps/Akana/2020
+CONTAINER_NAME=pm_b_prd
+CONTAINER_KEY=10001
+DEFAULT_HOST=uxieprdapp10
+DEFAULT_PORT=9901
+DEFAULT_BIND_ALL=true
+ROOT_CONTEXT=
+SESSION_TIMEOUT=3600
+CONTAINER_IDENTITY_ACTION=generate.pki.keys.and.x509
+
+ADMIN_CONSOLE_LOCALHOST_ONLY=false
+ADMIN_CONSOLE_ACCESS_RESTRICTED=true
+ADMIN_CONSOLE_DOMAIN_ENABLED=true
+ADMIN_CONSOLE_BASICAUTH_ENABLED=true
+
+# Oracle DB
+#DB_NAME = TABLE_SPACE name
+DB_NAME=GW_PRD
+DB_TYPE=oracle-sn
+DB_INSTANCE=PHIED
+DB_PORT=1606
+#DB_ADMIN_USERNAME=oracle
+#DB_ADMIN_PASSWORD=oracle
+DB_USERNAME=GW_PRD
+DB_PASSWORD=gw_prd
+DB_SERVER=iedevdb.healthy.bewell.ca
+#needs to be 3 x / in front of the directory listed
+DB_DRIVER_LOCATION=file:///data/u01/apps/Akana/resources/ojdbc8.jar
+#timeout in ms and is le'massive for creating the schema, not used when actually running
+DB_SCHEMA_TIMEOUT=4000000000
+
+#elasticsearch
+ES_MODE=rest.client
+ES_CLUSTER=
+ES_TRANSPORT_URL=http\://uxieprdapp09.healthy.bewell.ca\:9200
+ES_INDEX=Akana_PRD
+
+ORG_KEY=uddi:soa.com:managementconfigurationbusinesskey
+#if you are creating multiple pm instances after the first one the CREATE_CLUSTER must be set to false
+CREATE_CLUSTER=false
+CLUSTER_NAME=pm-cluster
+CLUSTER_KEY=pm-cluster
+CLUSTER_URL=https\:https\://uxieprdapp09.healthy.bewell.ca\:9900
+CLONE_SERVICES=false

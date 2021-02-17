@@ -1,0 +1,10 @@
+{
+	"name":"cm-complete",
+	"description":"Complete CM Container Recipe",
+	"phases":["create","deploy","finalize"],
+	"includes":[
+		{ "location":"ps-cm-noauth-features.json" },
+		{ "location":"cm-tasks.json" },
+		{ "location":"cm-finalize.json" }
+	]
+}

@@ -1,0 +1,14 @@
+{
+	"name":"console",
+	"phases":["finalize"],
+	"description":"com.soa.console Config",
+	"configurations":[
+		{
+			"pid":"com.soa.console",
+			"update":{
+				"QuickSearch.enabled":"${QUICKSEARCH_ENABLED|false}",
+				"pmcontext.path":"${PMCONTEXT|/}"
+			}
+		}
+	]
+}

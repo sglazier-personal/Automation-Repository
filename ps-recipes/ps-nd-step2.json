@@ -1,0 +1,12 @@
+{
+	"name":"nd-cm-complete",
+	"description":"Complete ND for CM (ND + Extensions) Container Recipe",
+	"phases":["create","deploy","finalize"],
+	"includes":[
+		{ "location":"performance-nd.json" },
+		{ "location":"ps-remote-writer-nd.json" },
+		{ "location":"ps-platform-jetty.json" },
+		{ "location":"ahs-custom-logger.json" },
+		{ "location":"restart.json" }
+	]
+}

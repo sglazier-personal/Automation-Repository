@@ -1,0 +1,30 @@
+{
+	"name":"cm-tenant",
+	"description":"Community Manager Tenant Recipe",
+	"phases":["deploy"],
+	"tasks":[
+		{
+			"name":"com.akana.atmosphere.create.tenant",
+			"steps":[
+				{
+					"name":"create.tenant",
+					"properties":{
+						"tenant.id":"${TENANT_ID|hostname()}",
+						"tenant.name":"${TENANT_NAME|hostname()}",
+						"tenant.address":"https://${TENANT_HOST|hostname()}:${DEFAULT_PORT|9900}",
+						"tenant.org":"${TENANT_ORG|}",
+						"es.index":"${ES_INDEX|default}",
+						"theme":"${TENANT_THEME|default}",
+						"theme.impl":"${TENANT_THEME_IMPL|}",
+						"virtual.hosts":"${TENANT_VHOSTS|}",
+						"admin.email":"${TENANT_EMAIL|administrator@localhost}",
+						"admin.password":"${TENANT_PASSWORD|Passw0rd}",
+						"console.address":"https://${TENANT_CONSOLE_HOST|hostname()}:${DEFAULT_PORT|9900}/${TENANT_CONSOLE_PATH|atmosphere}",
+						"contact.email":"${TENANT_CONTACT_EMAIL|administrator@localhost}",
+						"from.email":"${TENANT_FROM_EMAIL|administrator@localhost}"
+					}
+				}
+			]
+		}
+	]
+}

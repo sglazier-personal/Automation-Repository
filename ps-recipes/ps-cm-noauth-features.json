@@ -1,0 +1,17 @@
+{
+	"name":"cm",
+	"description":"Community Manager Default Recipe",
+	"phases":["deploy"],
+	"features":{
+		"timeout":"3600000",
+		"install":[
+			"com.soa.atmosphere.feature",
+			"com.soa.feature.pm.console.atmosphere",
+			"com.soa.feature.atmosphere.theme.default",
+			"com.soa.feature.atmosphere.theme.simpledev",
+			"com.soa.feature.atmosphere.theme.hermosa",
+			"com.soa.feature.atmosphere.theme.devops",
+			"com.soa.feature.atmosphere.theme.bonita"
+		]
+	}
+}

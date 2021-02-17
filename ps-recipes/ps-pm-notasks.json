@@ -1,0 +1,8 @@
+{
+	"name":"pm",
+	"description":"PM container recipe",
+	"phases":["deploy"],
+	"includes":[
+		{ "location":"pm-features.json" }
+	]
+}

@@ -1,0 +1,10 @@
+{
+        "name":"AHS",
+        "description":"Alberta Health Services logger recipe",
+        "phases":["deploy"],
+        "features":{
+                "install":[
+                        "ca.albertahealthservices.soa.plugin.logger"
+                ]
+        }
+}

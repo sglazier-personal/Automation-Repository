@@ -1,0 +1,10 @@
+{
+	"name":"nd-cm-complete",
+	"description":"Complete ND for CM (ND + Extensions) Container Recipe",
+	"phases":["create","deploy","finalize"],
+	"includes":[
+		{ "location":"remote-writer-nd.json" },
+		{ "location":"platform-jetty.json" },
+		{ "location":"restart.json" }
+	]
+}

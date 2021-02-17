@@ -1,0 +1,12 @@
+{
+    "name":"pingfederate",
+    "description":"Ping Federate for CM/ND",
+    "phases":["deploy"],
+    "includes":[
+    ],
+    "features":{
+        "install":[
+            "com.soa.feature.pingfederate"
+        ]
+    }
+}

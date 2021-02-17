@@ -1,0 +1,30 @@
+{
+        "name":"pmcm-provision-task",
+        "description":"PMCM Provisioning Task Recipe",
+        "phases":["deploy"],
+        "tasks":[
+                {
+                        "name":"com.soa.atmo.api.provisioning.task",
+                        "steps":[
+                                {
+                                        "name":"com.soa.atmo.api.provisioning.task",
+                                        "timeout":"${CM_PROVISION_TIMEOUT|240000}",
+                                        "properties":{
+                                        }
+                                }
+                        ]
+                },
+                {
+                        "name":"com.soa.provision.task",
+                        "steps":[
+                                {
+                                        "name":"perform.provisioning",
+                                        "timeout":"${PM_PROVISION_TIMEOUT|7200000}",
+                                        "properties":{
+                                                "provision":"true"
+                                        }
+                                }
+                        ]
+                }
+        ]
+}
