@@ -1,17 +1,17 @@
-INSTALL_DIR=/data/u01/apps/Akana/2020
-PRODUCT_HOME=/data/u01/apps/Akana/2020
-CONTAINER_NAME=ndint_b_stl
-CONTAINER_KEY=10004
+INSTALL_DIR=/opt/akana/sandbox/2020.1
+PRODUCT_HOME=/opt/akana/sandbox/2020.1
+CONTAINER_NAME=gateway
+CONTAINER_KEY=10003
 CONTAINER_ADMIN=administrator
 CONTAINER_ADMIN_PASSWORD=password
-DEFAULT_HOST=uxieprdapp10
-DEFAULT_PORT=9911
+DEFAULT_HOST=gateway.sandbox.org
+DEFAULT_PORT=9915
 DEFAULT_BIND_ALL=true
 ROOT_CONTEXT=
 SESSION_TIMEOUT=3600
 
 # db-driver.json
-DB_DRIVER_LOCATION=file:///data/u01/apps/Akana/resources/ojdbc8.jar
+DB_DRIVER_LOCATION=file:///opt/akana/resources/db/ojdbc8.jar
 
 # container-identity.json
 CONTAINER_IDENTITY_ACTION=generate.pki.keys.and.x509
@@ -20,7 +20,7 @@ CONTAINER_IDENTITY_ACTION=generate.pki.keys.and.x509
 #KEYSTOREALIAS=
 #KEYSTORELOCATION=
 #KEYSTOREPASSWORD=
-TRUSTSTORELOCATION=file:///data/u01/apps/Akana/PKI/akana_b_stl.jks
+TRUSTSTORELOCATION=file:///opt/akana/sandbox/automation_2020.1/trust.jks
 TRUSTSTOREPASSWORD=password
 CRLENABLED=false
 
@@ -33,12 +33,12 @@ ADMIN_CONSOLE_BASICAUTH_ENABLED=true
 # MongoDB
 MONGO_USERNAME=
 MONGO_PASSWORD=
-# MONGO_URL=mongodb://mongohost.acme.com:27017/Akana?connectTimeoutMS=15000&socketTimeoutMS=1500000&minPoolSize=0&maxPoolSize=100&waitQueueMultiple=5&waitQueueTimeoutMS=10000
+# MONGO_URL=mongodb://mongo.sandbox.org:27017/Akana?connectTimeoutMS=15000&socketTimeoutMS=1500000&minPoolSize=0&maxPoolSize=100&waitQueueMultiple=5&waitQueueTimeoutMS=10000
 MONGOASYNCTHREAD=20
 
 # Policy Manager Connection
 PM_SCHEME=https
-PM_HOST=uxieprdapp09
+PM_HOST=platform_vip.sandbox.org
 PM_PORT=9900
 PM_ADMIN=administrator
 PM_PASSWORD=password

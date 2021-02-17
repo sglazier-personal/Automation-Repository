@@ -1,8 +1,8 @@
-INSTALL_DIR=/data/u01/apps/Akana/2020
-PRODUCT_HOME=/data/u01/apps/Akana/2020
-CONTAINER_NAME=pm_a_prd
+INSTALL_DIR=/opt/akana/sandbox/2020.1
+PRODUCT_HOME=/opt/akana/sandbox/2020.1
+CONTAINER_NAME=platform
 CONTAINER_KEY=10000
-DEFAULT_HOST=uxieprdapp09
+DEFAULT_HOST=platform_host.sandbox.org
 DEFAULT_PORT=9901
 DEFAULT_BIND_ALL=true
 ROOT_CONTEXT=
@@ -14,54 +14,51 @@ ADMIN_CONSOLE_ACCESS_RESTRICTED=true
 ADMIN_CONSOLE_DOMAIN_ENABLED=true
 ADMIN_CONSOLE_BASICAUTH_ENABLED=true
 
-TENANT_ID=ahs-api
-TENANT_NAME=AHS-API-Portal
-TENANT_HOST=uxieprdapp09.healthy.bewell.ca
-#VIP if available TENANT_CONSOLE_HOS
-TENANT_CONSOLE_HOST=uxieprdapp09.healthy.bewell.ca
+TENANT_ID=sanbox
+TENANT_NAME=Sandbox Portal
+TENANT_HOST=platform_host.sandbox.org
+TENANT_CONSOLE_HOST=platform_vip.sandbox.org
 TENANT_CONSOLE_PATH=cm
 #any host name you want to access the portal VIP
 TENANT_VHOSTS=uxieprdapp09.healthy.bewell.ca,uxieprdapp09,uxieprdapp10.healthy.bewell.ca,uxieprdapp10
 #initial admin user to get in
-TENANT_EMAIL=phieops@ahs.ca
+TENANT_EMAIL=admin@sandbox.org
 TENANT_PASSWORD=password
 TENANT_THEME=hermosa
 TENANT_THEME_IMPL=default
-#needs to match the TENANT_CONSOLE_PATH with a / infront
 TENANT_CONTEXT_ROOT=/cm
 
 # Oracle DB
 #DB_NAME = TABLE_SPACE name
-DB_NAME=GW_PRD
+DB_NAME=sandboxdb
 DB_TYPE=oracle-sn
-DB_INSTANCE=PHIED
-DB_PORT=1606
+DB_INSTANCE=XE
+DB_PORT=1521
 #DB_ADMIN_USERNAME=oracle
 #DB_ADMIN_PASSWORD=oracle
-DB_USERNAME=GW_PRD
-DB_PASSWORD=gw_prd
-DB_SERVER=ieprddb.healthy.bewell.ca
-#needs to be 3 x / in front of the directory listed
-DB_DRIVER_LOCATION=file:///data/u01/apps/Akana/resources/ojdbc8.jar
+DB_USERNAME=sandboxdb
+DB_PASSWORD=dbpassword
+DB_SERVER=db.sandbox.org
+DB_DRIVER_LOCATION=file:///opt/akana/resources/db/ojdbc8.jar
 #timeout in ms and is le'massive for creating the schema, not used when actually running
 DB_SCHEMA_TIMEOUT=4000000000
 
 # MongoDB
 MONGO_USERNAME=
 MONGO_PASSWORD=
-MONGO_URL=mongodb://esx-sb-mongo.apimonster.net:27018/Akana?connectTimeoutMS\=15000&socketTimeoutMS\=1500000&minPoolSize\=0&maxPoolSize\=100&waitQueueMultiple\=5&waitQueueTimeoutMS\=10000
+MONGO_URL=mongodb://mongo.sandbox.org:27018/Akana?connectTimeoutMS\=15000&socketTimeoutMS\=1500000&minPoolSize\=0&maxPoolSize\=100&waitQueueMultiple\=5&waitQueueTimeoutMS\=10000
 MONGOASYNCTHREAD=20
 
 #elasticsearch
 ES_MODE=rest.client
 ES_CLUSTER=
-ES_TRANSPORT_URL=http\://localhost\:9200
-ES_INDEX=Akana_PRD
+ES_TRANSPORT_URL=http\://elastic.sandbox.org\:9200
+ES_INDEX=sandbox
 
 ORG_KEY=uddi:soa.com:managementconfigurationbusinesskey
 #if you are creating multiple pm instances after the first one the CREATE_CLUSTER must be set to false
 CREATE_CLUSTER=true
 CLUSTER_NAME=pm-cluster
 CLUSTER_KEY=pm-cluster
-CLUSTER_URL=https\:https\://uxieprdapp09.healthy.bewell.ca\:9900
+CLUSTER_URL=https\:https\://platform_vip.sandbox.org\:9900
 CLONE_SERVICES=false
