@@ -1,8 +1,8 @@
 # Listener Details
-INSTALL_DIR=/data/u01/apps/Akana/2020
-CONTAINER_NAME=nddmz_a_stl
+INSTALL_DIR=/opt/akana/sandbox/2020.1
+CONTAINER_NAME=gateway
 LISTENER_NAME=svc1
-LISTENER_URL=http://uxieprdapp11:9922
+LISTENER_URL=http://gateway.sandbox.org:9905
 LISTENER_BIND_ALL=true
 MAX_THREADS=500
 MIN_THREADS=10

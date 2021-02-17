@@ -2,14 +2,14 @@
 
 # 03Sept2020 - Removed OAuth features from recipes
 
-INSTALL_PATH="/data/u01/apps/Akana/2020"
-AUTOMATION_PATH="/data/u01/apps/Akana/automation"
-PROPERTIES_PATH="$AUTOMATION_PATH/container-properties/stl"
-CONTAINER_PROPERTY_FILE="pm-stla.props"
+INSTALL_PATH="/opt/akana/sandbox/2020.1"
+AUTOMATION_PATH="/opt/akana/sandbox/automation_2020.1"
+PROPERTIES_PATH="$AUTOMATION_PATH/container-properties/sample"
+CONTAINER_PROPERTY_FILE="platform.props"
 LOG_PATH="$AUTOMATION_PATH/logs"
-ADMIN_LISTENER_PROPERTY_FILE="pm-stla-adminListener.props"
-SVC_LISTENER_PROPERTY_FILE="pm-stla-svcListener.props"
-CONTAINER_NAME="pm_a_stl"
+ADMIN_LISTENER_PROPERTY_FILE="platform-adminListener.props"
+SVC_LISTENER_PROPERTY_FILE="platform-svcListener.props"
+CONTAINER_NAME="platform"
 LOG_LEVEL="INFO"
 
 echo "**** Create PM Container ****"

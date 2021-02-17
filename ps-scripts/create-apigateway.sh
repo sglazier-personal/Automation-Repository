@@ -1,12 +1,11 @@
 #!/bin/sh
-INSTALL_PATH="/data/u01/apps/Akana/2020"
-AUTOMATION_PATH="/data/u01/apps/Akana/automation"
-PROPERTIES_PATH="$AUTOMATION_PATH/container-properties/stl"
-CONTAINER_PROPERTY_FILE="nddmz-stla.props"
+INSTALL_PATH="/opt/akana/sandbox/2020.1"
+AUTOMATION_PATH="/opt/akana/sandbox/automation.2020.1"
+PROPERTIES_PATH="$AUTOMATION_PATH/container-properties/sample"
+CONTAINER_PROPERTY_FILE="gateway.props"
 LOG_PATH="$AUTOMATION_PATH/logs"
-ADMIN_LISTENER_PROPERTY_FILE="nddmz-stla-adminListener.props"
-SVC_LISTENER_PROPERTY_FILE="nddmz-stla-svcListener.props"
-SVC2_LISTENER_PROPERTY_FILE="nddmz-stla-svc2Listener.props"
+ADMIN_LISTENER_PROPERTY_FILE="gateway-adminListener.props"
+SVC_LISTENER_PROPERTY_FILE="gateway-svcListener.props"
 CONTAINER_NAME="nddmz_a_stl"
 LOG_LEVEL="INFO"
 
@@ -26,13 +25,6 @@ sleep 5
 
 echo "**** Add Service Listener ****"
 $INSTALL_PATH/bin/jython.sh -Dorg.slf4j.simpleLogger.defaultLogLevel=$LOG_LEVEL -Dorg.slf4j.simpleLogger.logFile=$LOG_PATH/$CONTAINER_NAME.03_nd_addHttpsListener.log -m akana.container --recipe $INSTALL_PATH/recipes/add-local-listener.json  --props $PROPERTIES_PATH/$SVC_LISTENER_PROPERTY_FILE --home $INSTALL_PATH
-echo "**** Listener Added Sucessfully ****"
-
-echo "Waiting for next step"
-sleep 5
-
-echo "**** Add Service Listener ****"
-$INSTALL_PATH/bin/jython.sh -Dorg.slf4j.simpleLogger.defaultLogLevel=$LOG_LEVEL -Dorg.slf4j.simpleLogger.logFile=$LOG_PATH/$CONTAINER_NAME.03_nd_addHttpsListener.log -m akana.container --recipe $INSTALL_PATH/recipes/add-local-listener.json  --props $PROPERTIES_PATH/$SVC2_LISTENER_PROPERTY_FILE --home $INSTALL_PATH
 echo "**** Listener Added Sucessfully ****"
 
 echo "Waiting for next step"
