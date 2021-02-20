@@ -1,0 +1,14 @@
+{
+	"name":"pm-cm-complete",
+	"description":"Complete PM/CM Container Recipe",
+	"phases":["create","deploy","finalize"],
+	"includes":[
+		{ "location":"bootstrap.json" },
+		{ "location":"ps-pm-notasks.json" },
+		{ "location":"cm.json" },
+		{ "location":"container-identity.json" },
+		{ "location":"db-existing.json" },
+		{ "location":"db-schemas.json" },
+		{ "location":"restart.json" }
+	]
+}
